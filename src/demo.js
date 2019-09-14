@@ -35,7 +35,7 @@ export default function GroupedButtons() {
           Three
         </Button>
         <Button variant="outlined" color="primary" className={classes.button}>
-          Dinasaur
+          Dinasaur Trex
         </Button>
       </Grid>
     </Grid>
