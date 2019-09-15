@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { makeStyles } from "@material-ui/core/styles";
+import RadioButtons from "./radio";
 
 // execute the makeStyles hook? on a function that takes a theme argument and that function returns an object of styles.
 // the result of this makeStyles will be a function which we store as useStyles
@@ -15,6 +16,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const TimeSlotsPerDay = () => {
+  // we have to extract the classes object from the object returned from usestyles();
   const classes = useStyles();
   return (
     <Box
@@ -50,8 +52,6 @@ const TimeSlotsPerDay = () => {
   );
 };
 export default function GroupedButtons() {
-  // we have to extract the classes object from the object returned from usestyles();
-  const classes = useStyles();
   return (
     <Grid container spacing={3}>
       <Grid item>
@@ -65,18 +65,7 @@ export default function GroupedButtons() {
         </ButtonGroup>
       </Grid>
       <Grid item>
-        <Button variant="outlined" color="primary" className={classes.button}>
-          One
-        </Button>
-        <Button variant="outlined" color="primary" className={classes.button}>
-          Two
-        </Button>
-        <Button variant="outlined" color="primary" className={classes.button}>
-          Three
-        </Button>
-        <Button variant="outlined" color="primary" className={classes.button}>
-          Dinasaur Trex
-        </Button>
+        <RadioButtons />
       </Grid>
     </Grid>
   );
